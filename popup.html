@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Series Tracker</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 12px;
+      width: 340px;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1e293b;
+    }
+    h1 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .clear-btn {
+      background: transparent;
+      color: #94a3b8;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .clear-btn:hover {
+      color: #f8fafc;
+      border-color: #64748b;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 380px;
+      overflow-y: auto;
+    }
+    .item {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .meta {
+      font-size: 12px;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .actions {
+      display: flex;
+      gap: 6px;
+    }
+    .btn-resume {
+      flex: 1;
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-resume:hover {
+      background: #0369a1;
+    }
+    .btn-delete {
+      background: #334155;
+      color: #e2e8f0;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .btn-delete:hover {
+      background: #475569;
+    }
+    .empty {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      padding: 24px 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Series Tracker</h1>
+    <button id="clearAllBtn" class="clear-btn" type="button">Clear All</button>
+  </div>
+  <div id="list" class="list"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
